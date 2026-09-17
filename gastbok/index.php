@@ -24,4 +24,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     # sparar listan tillbaka till filen
     file_put_contents($file, json_encode($entries));
+
+    $newentry = array(
+        "namn" => $name,
+        "meddelande" => $message,
+        "tid" => time()
+    );
 }
+
+# spara listan tillbaka till filen
+file_put_contents($file, json_encode($entries));
+
