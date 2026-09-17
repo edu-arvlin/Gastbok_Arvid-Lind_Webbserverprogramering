@@ -34,4 +34,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 # spara listan tillbaka till filen
 file_put_contents($file, json_encode($entries));
-
+?>
