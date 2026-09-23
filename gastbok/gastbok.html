@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="sv">
   <head>
@@ -6,5 +7,27 @@
     <title>Gästbok</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+
+  <body>
+    <main class="container">
+      <h1>Gästbok</h1>
+
+      <form method="POST">
+        <label for="namn">Namn:</label>
+        <input type="text" id="namn" name="namn" required />
+
+        <label for="meddelande">Meddelande:</label>
+        <textarea id="meddelande" name="meddelande" required></textarea>
+
+        <button type="submit">Skicka</button>
+      </form>
+
+      <section class="inlagg">
+        <h2>Inlägg</h2>
+
+        {{INLAGG}}
+      </section>
+    </main>
+  </body>
 </html>
+```
