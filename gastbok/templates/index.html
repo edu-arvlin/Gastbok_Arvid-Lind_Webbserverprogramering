@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gästbok</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Gästbok</h1>
+      <p>Välkommen till gästboken!</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Nytt inlägg</h2>
+
+        <form method="post" action="/write-json">
+          <p>
+            <label for="namn">Namn:</label><br />
+            <input type="text" id="namn" name="namn" required />
+          </p>
+
+          <p>
+            <label for="meddelande">Meddelande:</label><br />
+            <textarea
+              id="meddelande"
+              name="meddelande"
+              rows="6"
+              cols="40"
+              required
+            ></textarea>
+          </p>
+
+          <p>
+            <button type="submit">Spara inlägg</button>
+          </p>
+        </form>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Inlägg</h2>
+
+        {% if posts %} {% for post in posts %}
+
+        <article>
+          <h3>{{ post.namn }}</h3>
+
+          <p>
+            <strong>Tid:</strong>
+            {{ post.tid }}
+          </p>
+
+          <p>{{ post.meddelande }}</p>
+        </article>
+
+        <hr />
+
+        {% endfor %} {% else %}
+
+        <p>Det finns inga inlägg ännu.</p>
+
+        {% endif %}
+      </section>
+    </main>
+  </body>
+</html>

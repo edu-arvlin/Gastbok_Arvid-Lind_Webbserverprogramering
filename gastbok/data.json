@@ -1,0 +1,17 @@
+[
+    {
+        "namn": "Arvid",
+        "meddelande": "Hello",
+        "tid": "2026-09-24 10:40:24"
+    },
+    {
+        "namn": "Arvid",
+        "meddelande": "Hello",
+        "tid": "2026-09-24 10:43:08"
+    },
+    {
+        "namn": "Arvid",
+        "meddelande": "Test igen",
+        "tid": "2026-09-24 10:43:29"
+    }
+]
